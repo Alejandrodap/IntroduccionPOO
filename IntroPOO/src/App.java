@@ -26,12 +26,11 @@ public class App {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Creando un nuevo almacén de libros...");
                     longitud=Esdia.readInt("Seleccione el tamaño del almacen ",1,100);
                     almacen.crearAlamcen(longitud);
                     break;
                 case 2:
-                    ritmoLectura=Esdia.readFloat("Estableciendo ritmo de lectura a:");
+                    ritmoLectura=Esdia.readFloat("Estableciendo ritmo de lectura a: ");
                     break;
                 case 3:
                     System.out.println("Añadiendo nuevo libro");
