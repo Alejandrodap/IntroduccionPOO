@@ -7,8 +7,9 @@ public class App {
     
         
         int opcion= 0;
-        float ritmoLectura;
+        float ritmoLectura=1;
         int longitud;
+        Almacen almacen = new Almacen();
         do{
             System.out.println("|----------------------------------------------|");
             System.out.println("| MIS LIBROS                                   |");
@@ -26,28 +27,23 @@ public class App {
             switch (opcion) {
                 case 1:
                     System.out.println("Creando un nuevo almacén de libros...");
-
                     longitud=Esdia.readInt("Seleccione el tamaño del almacen ",1,100);
-                    Almacen almacen = new Almacen(longitud);
+                    almacen.crearAlamcen(longitud);
                     break;
                 case 2:
                     ritmoLectura=Esdia.readFloat("Estableciendo ritmo de lectura a:");
                     break;
                 case 3:
-                    System.out.println("Añadiendo un nuevo libro al almacén...");
+                    System.out.println("Añadiendo nuevo libro");
+                    almacen.AñadirLibro();
                     break;
                 case 4:
-                    System.out.println("Mostrando información actual de libros...");
+                    almacen.mostrarLibros(ritmoLectura);
                     break;
                 case 5:
-                    System.out.println("Saliendo... Se borrará toda la información.");
-                    break;
-                default:
-                    System.out.println("Opción no válida. Por favor, seleccione una opción entre 1 y 5.");
-                    break;    
+                    System.out.println("Saliendo...");
+                    break;  
                 }    
-        
-        
         }while(opcion!=5);
     }
 

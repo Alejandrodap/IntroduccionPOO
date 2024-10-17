@@ -4,9 +4,14 @@ import com.coti.tools.Esdia;
 
 public class Almacen {
     private Libro[]  libros;
-    private int librosAñadidos;
+    private int librosAñadidos=0;
 
-    public Almacen(int longitud) {
+
+
+    public Almacen() {
+    }
+
+    public void crearAlamcen(int longitud) {
         this.libros = new Libro[longitud];
         this.librosAñadidos = 0;
     }
@@ -28,7 +33,7 @@ public class Almacen {
         }
 
     }
-    public void mostrarAlmacen(float ritmoLectura){
+    public void mostrarLibros(float ritmoLectura){
         if (librosAñadidos == 0) {
             System.out.println("No hay libros en el almacén.");
             return;
